@@ -103,7 +103,7 @@ const Screen = () => {
   ]);
 
   const handleRes = useCallback(async (value) => {
-    await fetch("http://localhost:4000/backend", {
+    await fetch("https://mobotai-app.herokuapp.com/backend", {
       method: "POST",
       body: JSON.stringify({
         title: `test`,
