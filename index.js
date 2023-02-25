@@ -1,0 +1,47 @@
+const express = require("express");
+const app = express();
+const bodyParser = require("body-parser");
+require("dotenv").config();
+const cors = require("cors");
+const path = require("path");
+const PORT = process.env.PORT || 4000;
+const { Configuration, OpenAIApi } = require("openai");
+app.use(express.static(path.resolve(__dirname, "../Modern-app/build")));
+app.use(bodyParser.json());
+app.use(cors());
+
+const configuration = new Configuration({
+  apiKey: process.env.OPEN_API_KEY,
+});
+const openai = new OpenAIApi(configuration);
+// input data
+let aiRes;
+
+app.post("/backend", async (request, response) => {
+  console.log(request.body.body);
+  console.log(request.body.temperature);
+  try {
+    aiRes = await openai.createCompletion({
+      model: "text-davinci-003",
+      prompt: `${request.body.body}`,
+      max_tokens: 700,
+      top_p: 1.0,
+      temperature: Number(`${request.body.temperature}`),
+    });
+
+    console.log(aiRes.data.choices[0].text);
+    response.status(200).json({
+      success: true,
+      data: aiRes.data.choices[0].text,
+    });
+  } catch (err) {
+    return response.status(400).json({
+      success: false,
+      error: err.response
+        ? err.response.data
+        : "There was an issue processing this command.",
+    });
+  }
+});
+
+app.listen(PORT, () => console.log(`running on ${PORT}`));
