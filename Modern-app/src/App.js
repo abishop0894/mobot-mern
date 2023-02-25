@@ -58,7 +58,7 @@ function App() {
   //load screen logic
   setTimeout(() => {
     setLoading(false);
-  }, 4000);
+  }, 3500);
 
   //hide state for app content while loading (Ads)
   useEffect(() => {
