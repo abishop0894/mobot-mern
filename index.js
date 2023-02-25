@@ -6,7 +6,7 @@ const cors = require("cors");
 const path = require("path");
 const PORT = process.env.PORT || 4000;
 const { Configuration, OpenAIApi } = require("openai");
-app.use(express.static(path.resolve(__dirname, "../Modern-app/build")));
+app.use(express.static(path.resolve(__dirname, "./Modern-app/build")));
 app.use(bodyParser.json());
 app.use(cors());
 
