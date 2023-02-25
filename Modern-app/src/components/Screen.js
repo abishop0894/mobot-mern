@@ -103,7 +103,7 @@ const Screen = () => {
   ]);
 
   const handleRes = useCallback(async (value) => {
-    await fetch("https://mobot-mern2.vercel.app/backend", {
+    await fetch("http://localhost:4000/backend", {
       method: "POST",
       body: JSON.stringify({
         title: `test`,
