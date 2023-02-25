@@ -105,8 +105,7 @@
   "scripts": {
     "start": "node index.js",
     "heroku-postbuild": "cd Modern-app && npm install && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install-client": "cd Modern-app && npm install"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
     "npm": "9.1.2",
