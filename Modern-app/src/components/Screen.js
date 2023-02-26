@@ -52,7 +52,7 @@ const Screen = () => {
           triggerNextStep({ trigger: "hello-world" });
         }}
       >
-        <p style={{ margin: 0 }}>{!disabled ? "View response" : "Recieved"}</p>
+        <p style={{ margin: 0 }}>{!disabled ? "View response" : "Received"}</p>
       </Button>
     );
   };
