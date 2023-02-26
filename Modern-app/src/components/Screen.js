@@ -1,9 +1,7 @@
-import { Box, Typography } from "@mui/material";
-import Typewriter from "typewriter-effect";
-import { useEffect, useRef, useState } from "react";
-import { AppContext } from "../App";
+import { Typography } from "@mui/material";
+import { useState } from "react";
 import ChatBot, { Loading } from "react-simple-chatbot";
-import { useContext, useCallback, useMemo } from "react";
+import { useCallback } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { ThemeProvider } from "styled-components";
@@ -103,7 +101,7 @@ const Screen = () => {
   ]);
 
   const handleRes = useCallback(async (value) => {
-    await fetch("https://mobotai-app.herokuapp.com/backend", {
+    await fetch("https://mobotai-beta.herokuapp.com/backend", {
       method: "POST",
       body: JSON.stringify({
         title: `test`,
