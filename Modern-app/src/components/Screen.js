@@ -64,7 +64,7 @@ const Screen = () => {
       id: "hello-world",
       delay: 2000,
       message:
-        "Generate a response by submitting input below. Remember, be descriptive! 🤖",
+        "Submit a prompt to generate a response. Remember, be descriptive! 🤖",
       trigger: "2",
     },
 
