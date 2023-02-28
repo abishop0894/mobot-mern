@@ -163,8 +163,8 @@ const Nav = () => {
               </a>
               <p
                 style={{
-                  position: "relative",
-                  bottom: "-6vh",
+                  fontFamily: "roboto",
+                  color: "gray",
                 }}
               >
                 © 2023 MTG
