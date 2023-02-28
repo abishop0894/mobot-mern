@@ -26,7 +26,7 @@ const Loading = () => {
           className="logoLoading"
           marginBottom="-30vh"
           sx={{
-            textShadow: "2px 2px lightgrey",
+            textShadow: ".5px .5px lightgrey",
           }}
         >
           moBot.

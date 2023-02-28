@@ -90,7 +90,7 @@ const Nav = () => {
             variant="h3"
             color={show ? "black" : "white"}
             sx={{
-              textShadow: "2px 2px lightgrey",
+              textShadow: ".5px .5px lightgrey",
             }}
           >
             moBot.
