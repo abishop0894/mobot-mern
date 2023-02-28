@@ -56,13 +56,13 @@ function App() {
   //load screen logic
   setTimeout(() => {
     setLoading(false);
-  }, 3500);
+  }, 8000);
 
   //hide state for app content while loading (Ads)
   useEffect(() => {
     setTimeout(() => {
       setShow(true);
-    }, 8000);
+    }, 4500);
   }, []);
 
   const HandleReturnMobileUser = (e) => {
