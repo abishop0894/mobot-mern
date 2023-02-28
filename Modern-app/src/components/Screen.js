@@ -13,20 +13,7 @@ let condition;
 const Screen = () => {
   condition = window.innerHeight === 600 && window.innerWidth === 1024;
 
-  const larger = window.innerHeight > 800;
-  /*useEffect to setTimeout 
-  and change hidden stateful var
-  to true for typewriter
-   */
-  const lapop = window.innerHeight === 714 && window.innerWidth === 1024;
-
-  const { input, setInput } = useState("");
-  const [hidden, setHidden] = useState(false);
-  const [writer, setWriter] = useState(false);
-
   const [state, setState] = useState(false);
-  const [aiRes, setAiRes] = useState(window.localStorage.getItem("aiResponse"));
-  const [delay, setDelay] = useState(10000);
   const [show, setShow] = useState(false);
 
   const handleClose = () => {
@@ -34,12 +21,9 @@ const Screen = () => {
   };
   const handleShow = () => setShow(true);
 
-  const seperation = [input];
   const [disabled, setDisabled] = useState(false);
-  const [go, setGo] = useState(false);
 
-  //setInput state with API response from OPENAi
-
+  //Next Step FN
   const CustomStep = ({ triggerNextStep }) => {
     const [disabled, setDisabled] = useState(false);
     return (
@@ -62,7 +46,7 @@ const Screen = () => {
       id: "hello-world",
       delay: 2000,
       message:
-        "Submit a prompt to generate a response. Remember, be descriptive! 🤖",
+        "Submit a prompt below to generate a response. Remember, be descriptive! 🤖",
       trigger: "2",
     },
 
@@ -116,8 +100,6 @@ const Screen = () => {
       response.json().then((data) => {
         console.log(data.data);
         setState(data.data);
-
-        setGo(true);
       })
     );
   }, []);
