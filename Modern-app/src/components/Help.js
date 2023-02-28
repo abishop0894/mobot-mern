@@ -315,7 +315,11 @@ const Help = () => {
                 width: "70vw",
               }}
             >
-              <Typography variant="p" fontSize={"small"} textAlign={"center"}>
+              <Typography
+                variant="p"
+                fontSize={"small"}
+                textAlign={ipad ? "left" : "center"}
+              >
                 Temperature is a parameter that controls the amount of
                 randomness in the output of the model. It's a single digit
                 decimal, ranging from 0.0 to 1.0.{" "}
