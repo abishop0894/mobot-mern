@@ -1,7 +1,7 @@
 import LinearProgress from "@mui/joy/LinearProgress";
 import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import GoogleAd from "./GoogleAd";
+import AdSense from "react-adsense";
 import "../App.css";
 
 const Loading = () => {
@@ -35,14 +35,6 @@ const Loading = () => {
         sx={{
           color: "white",
         }}
-      />
-      <GoogleAd
-        style={{
-          width: "100%",
-          height: "20vh",
-        }}
-        slot="9876543210"
-        googleAdId="ca-pub-0123456789"
       />
     </Box>
   );

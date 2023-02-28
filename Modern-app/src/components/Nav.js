@@ -1,13 +1,11 @@
 import AppBar from "@mui/material/AppBar";
-import MenuIcon from "@mui/icons-material/Menu";
+
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Squash as Hamburger } from "hamburger-react";
 import { useState } from "react";
-import Divider from "@mui/joy/Divider";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { List, ListItem, ListItemButton } from "@mui/material";
-import ListDivider from "@mui/joy/ListDivider";
+import { ListItem, ListItemButton } from "@mui/material";
 import { motion } from "framer-motion";
 import { AppContext } from "../App";
 import { useContext } from "react";
@@ -163,6 +161,14 @@ const Nav = () => {
                   alt=""
                 />
               </a>
+              <p
+                style={{
+                  position: "relative",
+                  bottom: "-6vh",
+                }}
+              >
+                © 2023 MTG
+              </p>
             </motion.div>
           </center>
         </Offcanvas.Body>
