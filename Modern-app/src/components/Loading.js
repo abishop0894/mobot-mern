@@ -38,7 +38,6 @@ const Loading = () => {
           color: "white",
         }}
       />
-      <AdSense.Google client="ca-pub-3880313689633200" slot="3430907106" />
     </Box>
   );
 };
