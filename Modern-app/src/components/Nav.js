@@ -90,7 +90,7 @@ const Nav = () => {
             variant="h3"
             color={show ? "black" : "white"}
             sx={{
-              textShadow: ".5px .5px lightgrey",
+              textShadow: ".8px .8px lightgrey",
             }}
           >
             moBot.
@@ -141,7 +141,7 @@ const Nav = () => {
           <center>
             <motion.div
               initial={{ opacity: -1, y: 5 }}
-              animate={{ opacity: 1, y: -3 }}
+              animate={{ opacity: 1, y: -5 }}
               transition={{ ease: "easeIn", duration: 0.9 }}
               style={{
                 position: "relative",
