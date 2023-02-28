@@ -1,20 +1,13 @@
 import Modal from "react-bootstrap/Modal";
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { AppContext } from "../App";
-import Fade from "react-bootstrap/Fade";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import { Box, Stack, Card, Table, Paper, Slider, Divider } from "@mui/material";
+
+import { Box, Stack, Slider, Divider } from "@mui/material";
 
 import "../App.css";
 
@@ -325,7 +318,7 @@ const Help = () => {
             >
               <Typography
                 sx={{
-                  marginRight: ipad && "-7vw",
+                  marginRight: ipad && "-13vw",
                 }}
                 variant="p"
                 fontSize={"small"}
