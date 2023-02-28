@@ -1,10 +1,14 @@
 import LinearProgress from "@mui/joy/LinearProgress";
 import { Box, Typography } from "@mui/material";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import AdSense from "react-adsense";
 import "../App.css";
 
 const Loading = () => {
+  const [show, setShow] = useState(true);
+  setTimeout(() => {
+    setShow(false);
+  }, 2000);
   return (
     <Box
       display="flex"
@@ -19,18 +23,23 @@ const Loading = () => {
       }}
     >
       <center>
-        <Typography
-          marginTop="40vh"
-          color="white"
-          variant="h3"
-          className="logoLoading"
-          marginBottom="-30vh"
-          sx={{
-            textShadow: ".5px .5px lightgrey",
-          }}
+        <motion.div
+          hidden={show}
+          initial={{ opacity: -1, y: 5 }}
+          animate={{ opacity: 1, y: -5 }}
+          transition={{ ease: "easeIn", duration: 0.9 }}
         >
-          moBot.
-        </Typography>
+          <Typography
+            color="white"
+            variant="h3"
+            className="logoLoading"
+            sx={{
+              textShadow: ".8px .8px lightgrey",
+            }}
+          >
+            moBot.
+          </Typography>
+        </motion.div>
       </center>
       <LinearProgress
         variant="soft"

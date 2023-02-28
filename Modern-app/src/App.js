@@ -52,7 +52,6 @@ function App() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   //load screen logic
   setTimeout(() => {
@@ -63,7 +62,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setShow(true);
-    }, 4500);
+    }, 8000);
   }, []);
 
   const HandleReturnMobileUser = (e) => {
