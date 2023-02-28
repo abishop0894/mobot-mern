@@ -145,7 +145,7 @@ const Nav = () => {
               transition={{ ease: "easeIn", duration: 0.9 }}
               style={{
                 position: "relative",
-                bottom: "-6vh",
+                bottom: "-5vh",
               }}
             >
               <p
