@@ -1,6 +1,6 @@
 import LinearProgress from "@mui/joy/LinearProgress";
 import { Box, Typography } from "@mui/material";
-
+import { Adsense } from "@ctrl/react-adsense";
 import "../App.css";
 
 const Loading = () => {
@@ -37,6 +37,12 @@ const Loading = () => {
         sx={{
           color: "white",
         }}
+      />
+      <Adsense
+        client="ca-pub-3880313689633200"
+        slot="3430907106"
+        style={{ display: "block" }}
+        format="fluid"
       />
     </Box>
   );
