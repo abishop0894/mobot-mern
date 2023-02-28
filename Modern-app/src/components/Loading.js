@@ -1,6 +1,6 @@
 import LinearProgress from "@mui/joy/LinearProgress";
 import { Box, Typography } from "@mui/material";
-import AdSense from "react-adsense";
+
 import "../App.css";
 
 const Loading = () => {
