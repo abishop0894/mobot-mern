@@ -311,8 +311,7 @@ const Help = () => {
               marginTop={"2vh"}
               sx={{
                 marginLeft: !smDevices ? "13vw" : ipad ? "6.5vw" : "5.5vw",
-                paddingRight: smDevices && "2.3vw",
-                paddingLeft: ipad && "4vw",
+                paddingRight: smDevices ? "2.3vw" : ipad && "4vw",
                 width: "70vw",
               }}
             >
