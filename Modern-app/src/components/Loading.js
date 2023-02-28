@@ -25,6 +25,9 @@ const Loading = () => {
           variant="h3"
           className="logoLoading"
           marginBottom="-30vh"
+          sx={{
+            textShadow: "2px 2px lightgrey",
+          }}
         >
           moBot.
         </Typography>
