@@ -46,6 +46,7 @@ const Loading = () => {
         style={{
           position: "fixed",
           bottom: "0",
+          width: "100vw",
         }}
         className="adsbygoogle"
         data-ad-client="ca-pub-3880313689633200"
