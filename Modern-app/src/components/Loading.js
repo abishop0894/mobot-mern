@@ -36,11 +36,20 @@ const Loading = () => {
       <img
         style={{
           position: "fixed",
-          bottom: "0",
+          bottom: "10vh",
         }}
         src={cloudEffect}
         alt=""
       />
+      <Box
+        sx={{
+          position: "fixed",
+          bottom: "0",
+          width: "100%",
+          height: "10vh",
+          backgroundColor: "white",
+        }}
+      ></Box>
     </Box>
   );
 };
