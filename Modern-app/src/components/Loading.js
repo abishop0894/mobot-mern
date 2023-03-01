@@ -1,13 +1,10 @@
 import LinearProgress from "@mui/joy/LinearProgress";
 import { Box, Typography } from "@mui/material";
 import { useEffect } from "react";
+import cloudEffect from "../assets/loading.svg";
 import "../App.css";
 
 const Loading = () => {
-  useEffect(() => {
-    (window.adsbygoogle = window.adsbygoogle || []).push({});
-  }, []);
-
   return (
     <Box
       display="flex"
@@ -35,25 +32,15 @@ const Loading = () => {
           moBot.
         </Typography>
       </center>
-      <LinearProgress
-        variant="soft"
-        determinate={false}
-        sx={{
-          color: "white",
-        }}
-      />
-      <ins
+
+      <img
         style={{
           position: "fixed",
           bottom: "0",
-          width: "100vw",
         }}
-        className="adsbygoogle"
-        data-ad-client="ca-pub-3880313689633200"
-        data-ad-slot="3430907106"
-        data-ad-format="auto"
-        data-full-width-responsive="true"
-      ></ins>
+        src={cloudEffect}
+        alt=""
+      />
     </Box>
   );
 };
