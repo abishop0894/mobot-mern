@@ -44,7 +44,10 @@ const Nav = () => {
   const { modal, setModal } = useContext(AppContext);
 
   //hide fn
-  const hide = setTimeout(() => setShow(false), 300);
+  const hide = setTimeout((e) => {
+    e.preventDefault();
+    setShow(false);
+  }, 300);
 
   //menu fns & state
   const HandleHelp = () => {
