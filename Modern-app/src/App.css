@@ -171,6 +171,11 @@ body {
   overflow-wrap: normal !important;
 }
 
+.css-ahj2mt-MuiTypography-root {
+  font-size: 1.2rem !important;
+  overflow-wrap: normal !important;
+  word-break: keep-all !important;
+}
 
 .rsc-container {
 

@@ -45,6 +45,11 @@ const Help = () => {
     marginTop: "2vh",
   };
 
+  const labelStyles = {
+    width: "20vw !important",
+    minWidth: "fit-content !important",
+  };
+
   const generalContent = [
     {
       title: "What is moBot",
@@ -376,6 +381,9 @@ const Help = () => {
                     {" "}
                     <Stack>
                       <FormControlLabel
+                        sx={{
+                          fontSize: "x-large !important",
+                        }}
                         value="gpt-3.5-turbo"
                         control={<Radio sx={radioStyles} size="medium" />}
                         label="Gpt 3.5 Turbo"
