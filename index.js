@@ -17,13 +17,6 @@ const openai = new OpenAIApi(configuration);
 // input data
 let aiRes;
 
-const history = [];
-const messages = [];
-for (const [input_text, completion_text] of history) {
-  messages.push({ role: "user", content: input_text });
-  messages.push({ role: "assistant", content: completion_text });
-}
-
 app.post("/backend", async (request, response) => {
   console.log(request.body.body);
   console.log(request.body.temperature);
@@ -32,10 +25,8 @@ app.post("/backend", async (request, response) => {
     aiRes = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
       message: [{ role: "user", content: `${request.body.body}` }],
-      max_tokens: 700,
       temperature: Number(`${request.body.temperature}`),
     });
-    history.push([request.body.body, aiRes.data.choices[0].message]);
 
     console.log(aiRes.data.choices[0].message);
     response.status(200).json({
