@@ -22,9 +22,10 @@ app.post("/backend", async (request, response) => {
   console.log(request.body.temperature);
 
   try {
-    aiRes = await openai.createChatCompletion({
+    aiRes = await openai.createCompletion({
       model: "gpt-3.5-turbo",
-      message: [{ role: "user", content: `${request.body.body}` }],
+      message: `${request.body.body}`,
+      max_tokens: 700,
       temperature: Number(`${request.body.temperature}`),
     });
 
