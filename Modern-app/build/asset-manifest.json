@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.83df77b8.css",
-    "main.js": "/static/js/main.e66728ad.js",
+    "main.js": "/static/js/main.843ce0eb.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/loading.svg": "/static/media/loading.649fea751a4fbd9623ee342c981c339b.svg",
     "static/media/droidShare.svg": "/static/media/droidShare.af2e937e9e1b42e9cd58309f6aa40692.svg",
     "index.html": "/index.html",
     "static/media/iosShare.svg": "/static/media/iosShare.df5125375793431e39a299de2f5d27f8.svg",
     "main.83df77b8.css.map": "/static/css/main.83df77b8.css.map",
-    "main.e66728ad.js.map": "/static/js/main.e66728ad.js.map",
+    "main.843ce0eb.js.map": "/static/js/main.843ce0eb.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83df77b8.css",
-    "static/js/main.e66728ad.js"
+    "static/js/main.843ce0eb.js"
   ]
 }

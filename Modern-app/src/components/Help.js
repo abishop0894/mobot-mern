@@ -365,15 +365,16 @@ const Help = () => {
               <center>
                 <Typography variant="h6">Model</Typography>
                 <FormControl sx={radioContainer}>
-                  <Stack>
-                    <RadioGroup
-                      aria-labelledby="demo-controlled-radio-buttons-group"
-                      name="controlled-radio-buttons-group"
-                      value={value}
-                      color="white"
-                      defaultValue={"gpt-3.5-turbo"}
-                      onChange={HandleRadioChange}
-                    >
+                  <RadioGroup
+                    aria-labelledby="demo-controlled-radio-buttons-group"
+                    name="controlled-radio-buttons-group"
+                    value={value}
+                    color="white"
+                    defaultValue={"gpt-3.5-turbo"}
+                    onChange={HandleRadioChange}
+                  >
+                    {" "}
+                    <Stack>
                       <FormControlLabel
                         value="gpt-3.5-turbo"
                         control={<Radio sx={radioStyles} size="medium" />}
@@ -383,9 +384,9 @@ const Help = () => {
                         value="gpt-4"
                         control={<Radio sx={radioStyles} size="medium" />}
                         label="Gpt-4 (Beta)"
-                      />
-                    </RadioGroup>
-                  </Stack>
+                      />{" "}
+                    </Stack>
+                  </RadioGroup>
                 </FormControl>
               </center>
             </Box>
