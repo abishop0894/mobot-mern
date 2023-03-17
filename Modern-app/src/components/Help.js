@@ -1,13 +1,21 @@
 import Modal from "react-bootstrap/Modal";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../App";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
-import { Box, Stack, Slider, Divider } from "@mui/material";
+import Radio from "@mui/material/Radio";
+import {
+  Box,
+  Stack,
+  Slider,
+  Divider,
+  FormControl,
+  FormControlLabel,
+  RadioGroup,
+} from "@mui/material";
 
 import "../App.css";
 
@@ -18,6 +26,22 @@ const Help = () => {
     e.preventDefault();
     window.localStorage.setItem("temperature", e.target.value);
     console.log(window.localStorage.getItem("temperature"));
+  };
+  const [value, setValue] = useState("gpt-3.5-turbo");
+  const HandleRadioChange = async (e) => {
+    e.preventDefault();
+    setValue(e.target.value);
+    window.localStorage.setItem("Model", e.target.value);
+    console.log(window.localStorage.getItem("Model"));
+  };
+
+  const radioStyles = {
+    color: "white !important",
+    marginBottom: "1vh",
+  };
+
+  const radioContainer = {
+    marginTop: "2vh",
   };
 
   const generalContent = [
@@ -332,6 +356,35 @@ const Help = () => {
                 it's also more likely to generate nonsensical or incorrect
                 outputs. The default is 0.
               </Typography>
+            </Box>
+          </Stack>
+
+          <Stack justifyContent={"center"}>
+            <Box>
+              <center>
+                <Typography variant="h6">Model</Typography>
+                <FormControl sx={radioContainer}>
+                  <RadioGroup
+                    aria-labelledby="demo-controlled-radio-buttons-group"
+                    name="controlled-radio-buttons-group"
+                    value={value}
+                    color="white"
+                    defaultValue={"gpt-3.5-turbo"}
+                    onChange={HandleRadioChange}
+                  >
+                    <FormControlLabel
+                      value="gpt-3.5-turbo"
+                      control={<Radio sx={radioStyles} size="medium" />}
+                      label="Gpt-3.5-Turbo"
+                    />
+                    <FormControlLabel
+                      value="gpt-4"
+                      control={<Radio sx={radioStyles} size="medium" />}
+                      label="Gpt-4 (Beta version)"
+                    />
+                  </RadioGroup>
+                </FormControl>
+              </center>
             </Box>
           </Stack>
 

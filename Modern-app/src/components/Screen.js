@@ -88,7 +88,11 @@ const Screen = () => {
     await fetch("https://mobot-beta.herokuapp.com/backend", {
       method: "POST",
       body: JSON.stringify({
-        title: `test`,
+        title: `req`,
+        model:
+          window.localStorage.getItem("Model") !== null
+            ? window.localStorage.getItem("Model")
+            : "gpt-3.5-turbo",
         body: `${value}`,
         temperature: Number(`${window.localStorage.getItem("temperature")}`),
       }),

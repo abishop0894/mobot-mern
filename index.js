@@ -23,9 +23,9 @@ app.post("/backend", async (request, response) => {
 
   try {
     aiRes = await openai.createChatCompletion({
-      model: "gpt-4",
+      model: request.body.model,
       messages: [{ role: "user", content: request.body.body }],
-      max_tokens: 700,
+      max_tokens: 1000,
       temperature: Number(`${request.body.temperature}`),
     });
 
