@@ -380,7 +380,7 @@ const Help = () => {
                     <FormControlLabel
                       value="gpt-4"
                       control={<Radio sx={radioStyles} size="medium" />}
-                      label="Gpt-4 (Beta version)"
+                      label="Gpt-4 (Beta)"
                     />
                   </RadioGroup>
                 </FormControl>
