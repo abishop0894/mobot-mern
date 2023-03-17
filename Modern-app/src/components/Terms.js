@@ -1,10 +1,7 @@
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { AppContext } from "../App";
-import { useContext, useEffect, useState } from "react";
-import { Typography, List, ListItem, Divider } from "@mui/material";
-import { Stack, Box } from "@mui/material";
-import ChatBot from "react-simple-chatbot";
+import { useContext,  } from "react";
+import { Typography, Divider } from "@mui/material";
 import "../App.css";
 
 const Terms = () => {

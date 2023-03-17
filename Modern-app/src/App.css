@@ -33,7 +33,7 @@ body {
   width: 100%;
   height: 100vh !important;
   max-height: 100vh;
-  background-image: linear-gradient(to right top, #ffbce3, #eeb7e7, #dab2ea, #c4afec, #abaceb, #98b2f2, #82b9f7, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  background-image: linear-gradient(120deg, rgba(#e0c3fc, 0.75) 0%, rgba(#8ec5fc, 0.75) 100%);
   z-index: 0 !important;
   margin: 0 !important;
   padding: 0 !important;

@@ -15,7 +15,7 @@ const Loading = () => {
       overflow={"hidden"}
       sx={{
         backgroundImage:
-          "linear-gradient(to right top, #ffbce3, #eeb7e7, #dab2ea, #c4afec, #abaceb, #98b2f2, #82b9f7, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)",
+          "linear-gradient(120deg, rgba(#e0c3fc, 0.75) 0%, rgba(#8ec5fc, 0.75) 100%);",
       }}
     >
       <center>
