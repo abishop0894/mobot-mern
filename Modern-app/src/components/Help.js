@@ -153,7 +153,7 @@ const Help = () => {
       ],
     },
     {
-      title: "GPT-3.5-Turbo self queries",
+      title: "AI self queries",
       listItems: [
         "Ask GPT-3.5-Turbo about it's own capabilities",
         "Correct GPT-3.5-Turbo on it's knowledge",
