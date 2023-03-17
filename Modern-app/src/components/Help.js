@@ -38,6 +38,7 @@ const Help = () => {
   const radioStyles = {
     color: "white !important",
     marginBottom: "1vh",
+    marginRight: "1.2vw",
   };
 
   const radioContainer = {
