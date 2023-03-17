@@ -22,17 +22,17 @@ app.post("/backend", async (request, response) => {
   console.log(request.body.temperature);
 
   try {
-    aiRes = await openai.createCompletion({
+    aiRes = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
-      prompt: `${request.body.body}`,
+      messages: [{ role: "user", content: `${request.body.body}` }],
       max_tokens: 700,
       temperature: Number(`${request.body.temperature}`),
     });
 
-    console.log(aiRes.data.choices[0].message);
+    console.log(aiRes.data.choices[0].message.content);
     response.status(200).json({
       success: true,
-      data: aiRes.data.choices[0].message,
+      data: aiRes.data.choices[0].message.content,
     });
   } catch (err) {
     return response.status(400).json({
