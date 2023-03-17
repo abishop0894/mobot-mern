@@ -43,19 +43,22 @@ const Nav = () => {
   const HandleClose = () => setShow(false);
   const { modal, setModal } = useContext(AppContext);
 
+  //hide fn
+  const hide = setTimeout(() => setShow(false), 300);
+
   //menu fns & state
   const HandleHelp = () => {
-    setTimeout(() => setShow(false), 300);
+    hide();
     setModal("Help");
   };
 
   const HandleTerms = () => {
-    setTimeout(() => setShow(false), 300);
+    hide();
     setModal("Terms");
   };
 
   const HandleClear = () => {
-    setTimeout(() => setShow(false), 300);
+    hide();
     window.confirm("Are you sure? This action is irreversible.") &&
       window.location.reload();
     window.localStorage.removeItem("rsc_cache");

@@ -57,19 +57,19 @@ const Help = () => {
     },
     {
       title: "What can moBot do",
-      content: `GPT-3 (Generative Pre-trained Transformer 3), moBot's underlying
+      content: `GPT-3.5-Turbo (Generative Pre-trained Transformer), moBot's underlying
                 technology, is a powerful language model developed by OpenAI.
                 It’s the largest and most powerful language model ever created,
-                with 175 billion parameters. GPT-3 is a deep learning model that
+                with 175 billion parameters. GPT-3.5-Turbo is a deep learning model that
                 uses natural language processing (NLP) to generate human-like
                 text. It’s trained on a massive dataset of text from the
                 internet, and can generate text that’s indistinguishable from
-                human-written text. GPT-3 can be used to generate text for a
+                human-written text. GPT-3.5-Turbo can be used to generate text for a
                 variety of tasks, such as summarizing articles, writing blogs,
                 and generating code. It can also be used to explain difficult
-                concepts, such as complex code blocks. GPT-3 can generate text
+                concepts, such as complex code blocks. GPT-3.5-Turbo can generate text
                 that is both accurate and coherent, making it a powerful tool
-                for writing documents. Essentially, GPT-3 can be used to
+                for writing documents. Essentially, GPT-3.5-Turbo can be used to
                 explain/generate virtually anything if provided a sufficient
                 input.`,
     },
@@ -153,15 +153,15 @@ const Help = () => {
       ],
     },
     {
-      title: "GPT-3 self queries",
+      title: "GPT-3.5-Turbo self queries",
       listItems: [
-        "Ask GPT-3 about it's own capabilities",
-        "Correct GPT-3 on it's knowledge",
+        "Ask GPT-3.5-Turbo about it's own capabilities",
+        "Correct GPT-3.5-Turbo on it's knowledge",
       ],
     },
     {
       title: "Expert prompting",
-      listItems: ["Prompt GPT-3 with simultaneous conditions"],
+      listItems: ["Prompt GPT-3.5-Turbo with simultaneous conditions"],
     },
   ];
 
