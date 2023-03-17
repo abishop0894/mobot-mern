@@ -24,7 +24,7 @@ app.post("/backend", async (request, response) => {
   try {
     aiRes = await openai.createCompletion({
       model: "gpt-3.5-turbo",
-      message: `${request.body.body}`,
+      prompt: `${request.body.body}`,
       max_tokens: 700,
       temperature: Number(`${request.body.temperature}`),
     });
