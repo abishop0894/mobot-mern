@@ -85,7 +85,7 @@ const Screen = () => {
   ]);
 
   const handleRes = useCallback(async (value) => {
-    await fetch("https://mobot-beta.herokuapp.com/backend", {
+    await fetch("https://localhost:4000/backend", {
       method: "POST",
       body: JSON.stringify({
         title: `test`,

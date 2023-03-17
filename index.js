@@ -17,17 +17,25 @@ const openai = new OpenAIApi(configuration);
 // input data
 let aiRes;
 
+const history = [];
+const messages = [];
+for (const [input_text, completion_text] of history) {
+  messages.push({ role: "user", content: input_text });
+  messages.push({ role: "assistant", content: completion_text });
+}
+
 app.post("/backend", async (request, response) => {
   console.log(request.body.body);
   console.log(request.body.temperature);
+
   try {
     aiRes = await openai.createCompletion({
-      model: "text-davinci-003",
-      prompt: `${request.body.body}`,
+      model: "gpt-3.5-turbo",
+      message: messages,
       max_tokens: 700,
-      top_p: 1.0,
       temperature: Number(`${request.body.temperature}`),
     });
+    history.push([request.body.body, aiRes.data.choices[0].text]);
 
     console.log(aiRes.data.choices[0].text);
     response.status(200).json({
