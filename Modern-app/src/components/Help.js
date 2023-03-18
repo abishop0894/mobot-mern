@@ -38,7 +38,7 @@ const Help = () => {
   const radioStyles = {
     color: "white !important",
     marginBottom: "1vh",
-    marginRight: "1.2vw",
+    marginRight: ".2vw",
   };
 
   const radioContainer = {
@@ -368,7 +368,7 @@ const Help = () => {
           >
             <Box>
               <center>
-                <Typography variant="h6">Model</Typography>
+                <Typography variant="h6">Language Model</Typography>
                 <FormControl sx={radioContainer}>
                   <RadioGroup
                     aria-labelledby="demo-controlled-radio-buttons-group"
@@ -379,7 +379,7 @@ const Help = () => {
                     onChange={HandleRadioChange}
                   >
                     {" "}
-                    <Stack display={"flex"} direction={"column"}>
+                    <Stack spacing={"2vh"}>
                       <center>
                         <FormControlLabel
                           value="gpt-3.5-turbo"
