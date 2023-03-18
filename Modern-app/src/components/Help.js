@@ -45,11 +45,6 @@ const Help = () => {
     marginTop: "2vh",
   };
 
-  const labelStyles = {
-    width: "20vw !important",
-    minWidth: "fit-content !important",
-  };
-
   const generalContent = [
     {
       title: "What is moBot",
@@ -365,7 +360,12 @@ const Help = () => {
             </Box>
           </Stack>
 
-          <Stack justifyContent={"center"}>
+          <Stack
+            display={"flex"}
+            width={"auto"}
+            height={"auto"}
+            justifyContent={"center"}
+          >
             <Box>
               <center>
                 <Typography variant="h6">Model</Typography>
@@ -379,20 +379,32 @@ const Help = () => {
                     onChange={HandleRadioChange}
                   >
                     {" "}
-                    <Stack>
-                      <FormControlLabel
-                        sx={{
-                          fontSize: "x-large !important",
-                        }}
-                        value="gpt-3.5-turbo"
-                        control={<Radio sx={radioStyles} size="medium" />}
-                        label="Gpt 3.5 Turbo"
-                      />
-                      <FormControlLabel
-                        value="gpt-4"
-                        control={<Radio sx={radioStyles} size="medium" />}
-                        label="Gpt 4 (Beta)"
-                      />{" "}
+                    <Stack display={"flex"} direction={"column"}>
+                      <center>
+                        <FormControlLabel
+                          value="gpt-3.5-turbo"
+                          control={<Radio sx={radioStyles} size="medium" />}
+                          label="Gpt 3.5"
+                        />
+                        <FormControlLabel
+                          value="gpt-4"
+                          control={<Radio sx={radioStyles} size="medium" />}
+                          label="Gpt 4"
+                        />
+                      </center>
+                      <Typography variant="p" fontSize={"small"}>
+                        {value === "gpt-3.5-turbo" ? (
+                          "Default language model"
+                        ) : (
+                          <>
+                            More accurate than Gpt 3.5. (
+                            <span style={{ color: "#54B4D3" }}>
+                              Still in Beta
+                            </span>
+                            )
+                          </>
+                        )}
+                      </Typography>
                     </Stack>
                   </RadioGroup>
                 </FormControl>
